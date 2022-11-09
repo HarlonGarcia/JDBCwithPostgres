@@ -5,7 +5,6 @@ import DAO.CamisaDAO;
 import model.Camisa;
 
 public class SQLService {
-
 	public void inserirCamisa(int codigo, String tamanho, String marca, double preco, String descricao) {
 		Camisa camisa = new Camisa();
 		camisa.setCodigo(codigo);

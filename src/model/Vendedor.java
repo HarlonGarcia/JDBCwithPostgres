@@ -4,10 +4,14 @@ public class Vendedor {
 	private int id;
 	private String nome;
 	private String cpf;
-	private double salary;
+	private double salario;
 	
 	public int getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public String getNome() {
@@ -26,11 +30,11 @@ public class Vendedor {
 		this.cpf = cpf;
 	}
 	
-	public double getSalary() {
-		return salary;
+	public double getSalario() {
+		return salario;
 	}
 	
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
 }

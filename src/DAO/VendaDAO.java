@@ -41,7 +41,6 @@ public class VendaDAO {
             PreparedStatement preparador = con.prepareStatement(sql);
             preparador.setInt(1, venda.getQuantidade());
             preparador.setInt(2, venda.getId());
-
             preparador.execute();
             preparador.close();
 
@@ -51,11 +50,11 @@ public class VendaDAO {
         }
     }
 	
-	public void deletarVenda(Venda venda) {
+	public void deletarVenda(int id) {
         String sql = "DELETE FROM tb_venda WHERE id = ?";
         try {
             PreparedStatement preparador = con.prepareStatement(sql);
-            preparador.setInt(1, venda.getId());
+            preparador.setInt(1, id);
 
             preparador.execute();
             preparador.close();
@@ -81,7 +80,7 @@ public class VendaDAO {
                 venda.setQuantidade(resultados.getInt("quantidade"));
                 vendas.add(venda);
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return vendas;
